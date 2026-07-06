@@ -1,65 +1,115 @@
-import Image from "next/image";
+import Button from "@/components/Button";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="mx-auto max-w-3xl px-6 py-20">
+      <h1 className="font-manrope text-5xl font-medium leading-[1.1] tracking-tight text-[#41403F] sm:text-6xl">
+        Coding skills for every teenager in{" "}
+        <span
+          className="italic"
+          style={{ fontFamily: "'Times New Roman', Times, serif" }}
+        >
+          Phoenix.
+        </span>
+      </h1>
+
+      <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#706F6B]">
+        We host coding competitions and workshops to empower Phoenix teenagers
+        with future-ready, AI-driven tech skills.
+      </p>
+
+      <div className="mt-10 flex flex-wrap gap-4">
+        <Button href="https://tally.so/r/A7J7be" external>
+          Join mailing list
+        </Button>
+        <Button
+          href="https://hcb.hackclub.com/donations/start/thecodehatch"
+          variant="secondary"
+          external
+        >
+          Donate
+        </Button>
+      </div>
+
+      <div className="mt-24 grid gap-px border border-black/10 bg-black/5 sm:grid-cols-3">
+        <div className="bg-[#F5F1E8] p-8">
+          <p className="font-serif text-3xl text-[#41403F]">70+</p>
+          <p className="mt-2 text-sm text-[#706F6B]">
+            Participants across events
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="bg-[#F5F1E8] p-8">
+          <p className="font-serif text-3xl text-[#41403F]">2</p>
+          <p className="mt-2 text-sm text-[#706F6B]">Flagship events held</p>
         </div>
-      </main>
+        <div className="bg-[#F5F1E8] p-8">
+          <p className="font-serif text-3xl text-[#41403F]">Free</p>
+          <p className="mt-2 text-sm text-[#706F6B]">
+            Open to all skill levels
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-24 space-y-0">
+        <article className="border-t border-black/10 py-10">
+          <p className="mb-2 text-xs uppercase tracking-widest text-[#706F6B]">
+            What we are
+          </p>
+          <h2 className="mb-3 font-serif text-xl text-[#41403F]">
+            An open collective of coders, engineers, and designers.
+          </h2>
+          <p className="max-w-xl leading-relaxed text-[#706F6B]">
+            The Code Hatch is a community bringing together teenagers who want
+            to make stuff. You&apos;re invited.
+          </p>
+          <Link
+            href="/join"
+            className="mt-4 inline-block text-sm text-[#41403F] underline underline-offset-4 hover:text-[#ed5332] hover:no-underline"
+          >
+            Learn more
+          </Link>
+        </article>
+
+        <article className="border-t border-black/10 py-10">
+          <p className="mb-2 text-xs uppercase tracking-widest text-[#706F6B]">
+            How it works
+          </p>
+          <h2 className="mb-3 font-serif text-xl text-[#41403F]">
+            Workshops, talks, project time, and open demos.
+          </h2>
+          <p className="max-w-xl leading-relaxed text-[#706F6B]">
+            The real magic is in the demos — you made something you are proud
+            of. Share your work, get feedback, and make new friends along the
+            way.
+          </p>
+          <Link
+            href="/events"
+            className="mt-4 inline-block text-sm text-[#41403F] underline underline-offset-4 hover:text-[#ed5332] hover:no-underline"
+          >
+            View events
+          </Link>
+        </article>
+
+        <article className="border-t border-black/10 py-10">
+          <p className="mb-2 text-xs uppercase tracking-widest text-[#706F6B]">
+            Who we are
+          </p>
+          <h2 className="mb-3 font-serif text-xl text-[#41403F]">
+            Built by students, for students.
+          </h2>
+          <p className="max-w-xl leading-relaxed text-[#706F6B]">
+            Founded by Aaradhya Panda to create a space where Phoenix teens can
+            learn, collaborate, and grow their coding skills.
+          </p>
+          <Link
+            href="/team"
+            className="mt-4 inline-block text-sm text-[#41403F] underline underline-offset-4 hover:text-[#ed5332] hover:no-underline"
+          >
+            Meet the team
+          </Link>
+        </article>
+      </div>
     </div>
   );
 }
